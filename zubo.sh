@@ -22,25 +22,32 @@ case $city_choice in
     1)
         city="江苏电信"
         stream="udp/239.49.8.19:9614"
-        url_fofa="https://fofa.info/result?qbase64=InVkcHh5IiAmJiByZWdpb249Iuaxn%2BiLjyIgJiYgb3JnPSJDaGluYW5ldCIgJiYgcHJvdG9jb2w9Imh0dHAi&page=1&page_size=10"
+	url_fofa=$(echo  '"udpxy" && country="CN" && region="Jiangsu" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/api/v1/search/all?key=393bd2aa82860eefe35aa35c21a051b5&qbase64="$url_fofa
         ;;
     2)
         city="浙江电信"
         stream="udp/233.50.201.100:5140"
-        url_fofa="https://fofa.info/result?qbase64=InVkcHh5IiAmJiByZWdpb249Iua1meaxnyIgJiYgb3JnPSJDaGluYW5ldCIgJiYgcHJvdG9jb2w9Imh0dHAi&page=1&page_size=20"
-        ;;
-    5)
-        city="河北联通"
-        stream="rtp/239.253.92.154:6011"
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Zhejiang" && org="Chinanet" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/api/v1/search/all?key=393bd2aa82860eefe35aa35c21a051b5&qbase64="$url_fofa
         ;;
     3)
-        city="湖北电信"
-        stream="rtp/239.69.1.40:9880"
-        url_fofa="https://fofa.info/result?qbase64=InVkcHh5IiAmJiByZWdpb249Iua5luWMlyIgJiYgb3JnPSJDaGluYW5ldCIgJiYgcHJvdG9jb2w9Imh0dHAi&page=1&page_size=20"
+        city="上海电信"
+        stream="udp/239.45.3.146:5140"
+	url_fofa=$(echo  '"udpxy" && country="CN" && region="Shanghai" && protocol="http"' | base64 |tr -d '\n')
+         url_fofa="https://fofa.info/api/v1/search/all?key=393bd2aa82860eefe35aa35c21a051b5&qbase64="$url_fofa
         ;;
     4)
-        city="河南电信"
-        stream="rtp/239.16.20.21:10210"
+        city="安徽电信"
+        stream="rtp/238.1.79.27:4328"
+	url_fofa=$(echo  '"udpxy" && country="CN" && region="AnHui" && protocol="http"' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/api/v1/search/all?key=393bd2aa82860eefe35aa35c21a051b5&qbase64="$url_fofa
+        ;;
+    5)
+        city="北京电信"
+        stream="rtp/225.1.8.21:8002"
+        url_fofa=$(echo  '"udpxy" && country="CN" && region="Beijing" && org="China Networks Inter-Exchange"  && protocol="http"' | base64 |tr -d '\n')
+        url_fofa="https://fofa.info/api/v1/search/all?key=393bd2aa82860eefe35aa35c21a051b5&qbase64="$url_fofa
         ;;
     6)
         city="广东电信"
@@ -83,8 +90,8 @@ case $city_choice in
         stream="rtp/226.0.2.152:9128"
         ;;
     16)
-        city="上海电信"
-        stream="udp/239.45.3.146:5140"
+        city="河北联通"
+        stream="rtp/239.253.92.154:6011"
         ;;
     17)
         city="福建电信"
@@ -95,8 +102,8 @@ case $city_choice in
         stream="udp/239.252.220.63:5140"
         ;;
     19)
-        city="安徽电信"
-        stream="rtp/238.1.79.27:4328"
+        city="湖北电信"
+        stream="rtp/239.69.1.40:9880"
         ;;
     20)
         city="天津联通"
@@ -139,8 +146,8 @@ case $city_choice in
         stream="rtp/239.29.0.2:5000"
         ;;
     30)
-        city="北京电信"
-        stream="rtp/225.1.8.21:8002"
+        city="河南电信"
+        stream="rtp/239.16.20.21:10210"
         ;;
     31)
         city="湖北联通"
