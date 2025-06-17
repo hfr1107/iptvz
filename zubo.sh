@@ -4,9 +4,9 @@ if [ $# -eq 0 ]; then
   echo "在5秒内输入1~4可选择城市"
   echo "1.江苏电信"
   echo "2.浙江电信"
-  echo "3.天津联通"
-  echo "4.湖北电信"
-  echo "5.河南电信"
+  echo "3.上海电信"
+  echo "4.安徽电信"
+  echo "5.北京电信"
   read -t 5 -p "超时未输入,将按默认设置测试" city_choice
 
   if [ -z "$city_choice" ]; then
