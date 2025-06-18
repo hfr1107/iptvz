@@ -171,7 +171,7 @@ case $city_choice in
         ;;
     0)
         # 逐个处理{ }内每个选项
-        for option in {1..35}; do
+        for option in {1..3}; do # 检测1-3
           bash "$0" $option  # 假定fofa.sh是当前脚本的文件名，$option将递归调用
         done
         exit 0
