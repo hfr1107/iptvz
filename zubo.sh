@@ -11,7 +11,7 @@ if [ $# -eq 0 ]; then
 
   if [ -z "$city_choice" ]; then
       echo "未检测到输入,默认测试全部"
-      city_choice=0
+      city_choice=1
   fi
 
 else
