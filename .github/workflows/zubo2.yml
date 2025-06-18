@@ -37,12 +37,3 @@ jobs:
           git add .
           git commit -m "更新组播源"
 #          git push
-
-
-      - name: Push To Github
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          repository: ${{ secrets.GH_PATH }}
-          directory: .
-          force: true
